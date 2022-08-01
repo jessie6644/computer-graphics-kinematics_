@@ -1,6 +1,6 @@
 # Computer Graphics – Kinematics
 
-Notice: I only contributed to *src* folder.
+> Notice: I only contributed to *src* folder.
 
 > **To get started:** Clone this repository using
 > 
