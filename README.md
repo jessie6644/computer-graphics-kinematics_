@@ -1,5 +1,7 @@
 # Computer Graphics – Kinematics
 
+Notice: I only contributed to *src* folder.
+
 > **To get started:** Clone this repository using
 > 
 >     git clone --recursive http://github.com/alecjacobson/computer-graphics-kinematics.git
