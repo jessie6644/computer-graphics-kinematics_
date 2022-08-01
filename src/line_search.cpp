@@ -10,6 +10,14 @@ double line_search(
 {
   /////////////////////////////////////////////////////////////////////////////
   // Replace with your code
-  return 0;
+  double sigma = max_step;
+  Eigen::VectorXd current = z - sigma * dz;
+  proj_z(current);
+  while (f(current) > f(z)) {   // can't be >=, o/w the application does not respond
+      sigma /= 2;
+      current = z - sigma * dz;
+      proj_z(current);
+  }
+  return sigma;
   /////////////////////////////////////////////////////////////////////////////
 }

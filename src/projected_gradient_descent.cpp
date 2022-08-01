@@ -10,5 +10,11 @@ void projected_gradient_descent(
 {
   /////////////////////////////////////////////////////////////////////////////
   // Add your code here
+  Eigen::VectorXd dz;
+  for(int i = 0; i < max_iters; i++) {
+      dz = grad_f(z);
+      z -= line_search(f, proj_z, z, dz, 10000) * dz;   // 'start with a large value'
+      proj_z(z);
+  } 
   /////////////////////////////////////////////////////////////////////////////
 }
